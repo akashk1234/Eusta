@@ -328,9 +328,15 @@
          <div class="footer-copyright-area b-t">
             <div class="footer-copyright-wrapper d-flex justify-content-center">
                <div class="footer-copyright-text">
-                  <p class="mb-0">© All Copyright 2024 by <a target="_blank" class="furniture-clr-hover"
-                        href="#">EUSTA</a></p>
-               </div>
+  <p class="mb-0">
+    © All Copyright <span id="year"></span> by 
+    <a target="_blank" class="furniture-clr-hover" href="#">EUSTA</a>
+  </p>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
             </div>
          </div>
       </div>
