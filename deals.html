@@ -85,7 +85,7 @@
                         <div class="mean__menu-wrapper furniture__menu d-none d-lg-block">
                            <div class="main-menu">
                               <nav id="mobile-menu">
-                                 <ul>
+                                <ul>
                                     <li class="has-dropdown">
                                        <a href="index.html">Home</a>
                                     </li>
@@ -101,7 +101,7 @@
                                     <li>
                                        <a href="contact.html">Contact</a>
                                     </li>
-                                 </ul>
+                                </ul>
                               </nav>
                            </div>
                         </div>
@@ -137,104 +137,220 @@
    <!-- Body main wrapper start -->
    <main>
 
-      <!-- category start -->
-            <div class="container mt-5 mb-30" >
-               <div class="header-search d-block d-xxl-none" style="max-width: 100% !important;">
-                           <form action="#">
-                              <input type="text" placeholder="Search...">
-                              <button type="submit">
-                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.4443 13.4445L16.9999 17" stroke="white" stroke-width="2"
-                                       stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                       d="M15.2222 8.11111C15.2222 12.0385 12.0385 15.2222 8.11111 15.2222C4.18375 15.2222 1 12.0385 1 8.11111C1 4.18375 4.18375 1 8.11111 1C12.0385 1 15.2222 4.18375 15.2222 8.11111Z"
-                                       stroke="white" stroke-width="2" />
-                                 </svg>
-                              </button>
-                           </form>
-                        </div>
+      <style>
+        
+/* HERO */
 
-               <div class="categories" id="autoScrollCategories">
-                  <a href="" class="category">
-                     <img src="assets/imgs/Categories/sofa.png" alt=""><p>Sofas</p>
-                  </a>
-                  <a href="" class="category">
-                     <img src="assets/imgs/Categories/bed.png" alt=""><p>Beds</p>
-                  </a>
-                  <a href="" class="category">
-                     <img src="assets/imgs/Categories/dining-table.png" alt=""><p>Dining Table</p>
-                  </a>
-                  <a href="" class="category">
-                     <img src="assets/imgs/Categories/wardrobe.png" alt=""><p>Wardrobes</p>
-                  </a>
-                  <a href="" class="category">
-                     <img src="assets/imgs/Categories/coffee-table.png" alt=""><p>Coffee Tables</p>
-                  </a>
-                  <a href="" class="category">
-                     <img src="assets/imgs/Categories/office-chair.png" alt=""><p>Office Chairs</p>
-                  </a>
-                  <a href="" class="category">
-                     <img src="assets/imgs/Categories/sofa.png" alt=""><p>Recliners</p>
-                  </a>
-               </div> 
-            </div>
-            <script>
-               document.addEventListener("DOMContentLoaded", function () {
-               const container = document.getElementById("autoScrollCategories");
+.deals-hero{
 
-               let scrollSpeed = 0.3;
+background: linear-gradient(120deg,#ff512f,#dd2476);
 
-               function autoScroll() {
-                  container.scrollLeft += scrollSpeed;
+padding:50px;
 
-                  // infinite loop effect
-                  if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
-                     container.scrollLeft = 0;
-                  }
+border-radius:20px;
 
-                  requestAnimationFrame(autoScroll);
-               }
+color:white;
 
-               autoScroll();
+box-shadow:0 10px 40px rgba(0,0,0,0.15);
 
-               // Pause on hover/touch (better UX for mobile users)
-               container.addEventListener("mouseenter", () => scrollSpeed = 0);
-               container.addEventListener("mouseleave", () => scrollSpeed = 0.5);
-               container.addEventListener("touchstart", () => scrollSpeed = 0);
-               container.addEventListener("touchend", () => scrollSpeed = 0.5);
-               });
-            </script>
+}
 
-      <!-- category end -->
+.deal-title{
+
+font-size:42px;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+}
+
+.deal-subtitle{
+
+opacity:.9;
+
+margin-bottom:20px;
+
+}
+
+.deal-tags span{
+
+background:rgba(255,255,255,0.2);
+
+padding:8px 14px;
+
+margin-right:10px;
+
+border-radius:30px;
+
+font-size:13px;
+
+}
+
+
+
+.deal-highlight-box{
+
+background:white;
+
+color:#333;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+
+display:inline-block;
+
+}
+
+.deal-highlight-box h2{
+
+color:#ff4d4d;
+
+font-weight:800;
+
+}
+
+
+
+
+/* PRODUCT CARD OFFER */
+
+.product-card{
+
+position:relative;
+
+transition:.3s;
+
+}
+
+.product-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 30px rgba(0,0,0,0.12);
+
+}
+
+
+
+/* OFFER BADGE */
+
+.deal-offer-badge{
+
+position:absolute;
+
+top:10px;
+
+left:10px;
+
+background:linear-gradient(45deg,#ff4d4d,#ff9900);
+
+color:white;
+
+padding:8px 12px;
+
+border-radius:8px;
+
+text-align:center;
+
+font-weight:500;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+.deal-offer-badge .discount{
+
+font-size:12px;
+
+display:block;
+
+line-height:1;
+
+}
+
+.deal-offer-badge .text{
+
+font-size:10px;
+
+letter-spacing:1px;
+
+}
+
+
+
+/* PRICE STYLE */
+
+.product-card strike{
+
+color:#999;
+
+font-size:13px;
+
+}
+
+.product-card b{
+
+color:#ff4d4d;
+
+font-size:18px;
+
+}
+
+
+
+      </style>
 
       <!-- Product area start -->
       <section class="bd-product__area mb-30">
-         <div class="container">
-            <div class="row">
-               <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-6">
-                  <div class="bd-product__result mb-30">
-                     <h4>20 Products</h4>
-                  </div>
-               </div>
-               <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-6 col-6">
-                  <div
-                     class="product__filter-wrapper d-flex flex-wrap gap-3 align-items-center justify-content-md-end mb-30">
-                     <div class="product__filter-count d-flex align-items-center">
-                        <div class="btn-dropdown__options">
-                           <select style="border-radius: 30px; border: none;">
-                              <option>Sort</option>
-                              <option>Price: Low to High</option>
-                              <option>Price: High to Low</option>
-                              <option>Newest First</option>
-                              <option>Oldest First</option>
-                           </select>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+
+        <!-- DEALS HERO SECTION -->
+<section class="container mt-40 mb-40">
+
+   <div class="deals-hero">
+
+      <div class="row align-items-center">
+
+         <div class="col-lg-6">
+
+            <h1 class="deal-title text-light">
+               Mega Deals 
+            </h1>
+
+            <p class="deal-subtitle text-light">
+               Limited time offers on premium furniture.
+               Upgrade your home with stylish products at unbeatable prices.
+            </p>
+
+
+         </div>
+
+
+         <div class="col-lg-6 text-center">
+
+            <div class="deal-highlight-box">
+
+               <h3>Special Offer</h3>
+
+               <h2>Flat 30% OFF</h2>
+
+               <p>On selected products</p>
+
             </div>
 
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+         <div class="container">
+            
 
             <div class="row">
                <div class="col-xxl-3 col-lg-3 col-md-4 col-sm-6 col-6">
@@ -242,9 +358,10 @@
                               <div class="product-card">
                                  <div class="product-img-wrapper">
                                     <img src="assets/imgs/furniture/product/product1.png" alt="">
-                                    <div class="cus-product-badge">
-                                       <span class="product-trending">10% off</span>
-                                    </div>
+                                    <div class="deal-offer-badge">
+   <span class="discount">30%</span>
+   <span class="text">OFF</span>
+</div>
                                  </div>
                                  <h6>Stylish Gray Chair</h6>
    
@@ -265,9 +382,10 @@
                               <div class="product-card">
                                  <div class="product-img-wrapper">
                                     <img src="assets/imgs/furniture/product/product2.png" alt="">
-                                    <div class="cus-product-badge">
-                                       <span class="product-trending">10% off</span>
-                                    </div>
+                                    <div class="deal-offer-badge">
+   <span class="discount">30%</span>
+   <span class="text">OFF</span>
+</div>
                                  </div>
                                  <h6>Stylish Gray Chair</h6>
    
@@ -287,9 +405,10 @@
                               <div class="product-card">
                                  <div class="product-img-wrapper">
                                     <img src="assets/imgs/furniture/product/product3.png" alt="">
-                                    <div class="cus-product-badge">
-                                       <span class="product-trending">10% off</span>
-                                    </div>
+                                    <div class="deal-offer-badge">
+   <span class="discount">30%</span>
+   <span class="text">OFF</span>
+</div>
                                  </div>
                                  <h6>Stylish Gray Chair</h6>
    
@@ -309,9 +428,10 @@
                               <div class="product-card">
                                  <div class="product-img-wrapper">
                                     <img src="assets/imgs/furniture/product/product4.png" alt="">
-                                    <div class="cus-product-badge">
-                                       <span class="product-trending">10% off</span>
-                                    </div>
+                                    <div class="deal-offer-badge">
+   <span class="discount">30%</span>
+   <span class="text">OFF</span>
+</div>
                                  </div>
                                  <h6>Stylish Gray Chair</h6>
    
@@ -331,9 +451,10 @@
                               <div class="product-card">
                                  <div class="product-img-wrapper">
                                     <img src="assets/imgs/furniture/product/product5.png" alt="">
-                                    <div class="cus-product-badge">
-                                       <span class="product-trending">10% off</span>
-                                    </div>
+                                    <div class="deal-offer-badge">
+   <span class="discount">30%</span>
+   <span class="text">OFF</span>
+</div>
                                  </div>
                                  <h6>Stylish Gray Chair</h6>
    
@@ -353,9 +474,10 @@
                               <div class="product-card">
                                  <div class="product-img-wrapper">
                                     <img src="assets/imgs/furniture/product/product6.png" alt="">
-                                    <div class="cus-product-badge">
-                                       <span class="product-trending">10% off</span>
-                                    </div>
+                                    <div class="deal-offer-badge">
+   <span class="discount">30%</span>
+   <span class="text">OFF</span>
+</div>
                                  </div>
                                  <h6>Stylish Gray Chair</h6>
    
@@ -375,9 +497,10 @@
                               <div class="product-card">
                                  <div class="product-img-wrapper">
                                     <img src="assets/imgs/furniture/product/product7.png" alt="">
-                                    <div class="cus-product-badge">
-                                       <span class="product-trending">10% off</span>
-                                    </div>
+                                    <div class="deal-offer-badge">
+   <span class="discount">30%</span>
+   <span class="text">OFF</span>
+</div>
                                  </div>
                                  <h6>Stylish Gray Chair</h6>
    
@@ -397,9 +520,10 @@
                               <div class="product-card">
                                  <div class="product-img-wrapper">
                                     <img src="assets/imgs/furniture/product/product8.png" alt="">
-                                    <div class="cus-product-badge">
-                                       <span class="product-trending">10% off</span>
-                                    </div>
+                                    <div class="deal-offer-badge">
+   <span class="discount">30%</span>
+   <span class="text">OFF</span>
+</div>
                                  </div>
                                  <h6>Stylish Gray Chair</h6>
    
@@ -414,26 +538,6 @@
                               </div>
                            </a>
                         </div>
-            </div>
-            <div class="row">
-               <div class="bd-basic__pagination mt-50 d-flex align-items-center justify-content-center">
-                  <nav>
-                     <ul>
-                        <li>
-                           <span class="current">1</span>
-                        </li>
-                        <li>
-                           <a href="#">2</a>
-                        </li>
-                        <li>
-                           <a href="#">3</a>
-                        </li>
-                        <li>
-                           <a href="#"><i class="fa-regular fa-angle-right"></i></a>
-                        </li>
-                     </ul>
-                  </nav>
-               </div>
             </div>
          </div>
       </section>

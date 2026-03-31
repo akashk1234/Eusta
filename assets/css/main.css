@@ -13593,6 +13593,7 @@ p.checkout-coupon input[type=text]:focus {
             @media(max-width: 768px){
                .product-card{
                   padding: 8px;
+                  margin-bottom: 10px;
                }
                .cus-product-badge {
                   top: 8px;      
@@ -13608,7 +13609,15 @@ p.checkout-coupon input[type=text]:focus {
 
                .custm-offer-section{
                padding: 25px !important;
-            }
+              }
+              .product-card h6{
+                font-size: 13px;
+              }
+              .enquire-btn{
+                margin-top: -10px;
+                padding: 3px !important;
+                font-size: 12px;
+              }
             }
 
 
@@ -13798,3 +13807,82 @@ p.checkout-coupon input[type=text]:focus {
 
                
             }
+
+    
+/* colorful deals menu */
+
+.deals-menu{
+font-weight:600;
+background: linear-gradient(45deg,#ff512f,#dd2476,#ff9900);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+transition:.3s;
+}
+
+
+/* hover effect */
+.deals-menu-text:hover{
+opacity:.8;
+}
+
+
+/* colorful deals icon */
+
+.deals-icon i{
+
+background: linear-gradient(45deg,#ff512f,#dd2476,#ff9900);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+font-size:20px;
+
+}
+
+
+/* optional hover */
+
+.deals-icon:hover i{
+
+opacity:.8;
+
+}
+
+
+/* mobile slider */
+.offerSwiper{
+
+padding-bottom:40px;
+
+}
+
+
+.offerSwiper .swiper-slide{
+
+height:auto;
+
+}
+
+
+/* dot styling */
+
+.swiper-pagination-bullet{
+
+background:#ccc;
+
+opacity:1;
+
+}
+
+
+.swiper-pagination-bullet-active{
+
+background:#838383;
+
+width:18px;
+
+border-radius:20px;
+
+}
+
